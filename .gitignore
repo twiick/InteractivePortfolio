@@ -1,0 +1,15 @@
+# Images
+*.jpeg
+*.jpg
+*.png
+*.gif
+*.svg
+
+# Sounds
+*.mp3
+*.wav
+*.ogg
+
+# Videos
+*.mp4
+*.mov

@@ -6,12 +6,25 @@
     <title>Interactive Portfolio</title>
     <!-- IMPORT CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- IMPORT FONT FROM GOOGLE FONTS -->
+    <!-- IMPORT FONTS FROM GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- LOCKED SCREEN -->
+    <div id="locked-screen">
+        <div id="locked-screen-blur"></div>
+    </div>
+    <div id="login-container">
+        <img src="./assets/images/pictures/profile-image.png" alt="" id="login-image">
+        <p id="login-username">twiick.com</p>
+        <div id="login-input-container">
+            <input type="password" placeholder="Enter your password" id="login-input" class="input">
+            <i class="fa-regular fa-eye password-icon" id="login-input-icon"></i>
+        </div>
+    </div>
+    <!-- LANGUAGES CONTEXT MENU -->
     <div class="languages-context-menu">
         <p class="languages-title">Languages</p>
         <!-- ENGLISH LANGUAGE BUTTON -->
@@ -53,5 +66,7 @@
     </div>
     <!-- IMPORT SCRIPT -->
     <script src="./js/main.js"></script>
+    <!-- IMPORT ICONS FROM FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/73239f458e.js" crossorigin="anonymous"></script>
 </body>
 </html>

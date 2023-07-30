@@ -1,3 +1,21 @@
+const lockedScreen=document.querySelector("#locked-screen");
+const backgroundsPath="../assets/images/pictures/";
+const background1="background_1.jpg";
+const lockedScreenBlur=document.querySelector("#locked-screen-blur");
+const loginInput=document.querySelector("#login-input");
+const loginInputIcon=document.querySelector("#login-input-icon");
+
+lockedScreen.style.backgroundImage=`url(${backgroundsPath}/${background1})`;
+lockedScreen.addEventListener("click",()=>{
+    lockedScreenBlur.classList.add("blur")
+})
+
+loginInputIcon.addEventListener("click",()=>{
+    loginInputIcon.classList.toggle("fa-eye");
+    loginInputIcon.classList.toggle("fa-eye-slash");
+    (loginInput.type=="text")?loginInput.type="password":loginInput.type="text";
+})
+
 // Create a variable to set html tag
 const html=document.querySelector("html");
 
@@ -38,23 +56,23 @@ function changeLanguage(selectedlangButton,newLanguage){
         // Create a switch conditional to compare the (String)lang abbreviation, and return a function to set the new language
         switch (newLanguage) {
             case "en":
-                changeContentLanguage("Languages","English (United States)","Spanish (Colombia)","Italiano (Italia)","Portugues (Brasil)");
+                changeContentLanguage("Languages","English (United States)","Spanish (Colombia)","Italian (Italia)","Portugues (Brasil)","Enter your password");
                 break;
             case "es":
-                changeContentLanguage("Idiomas","Inglés (Estados Unidos)","Español (Colombia)","Italiano (Italia)","Portugués (Brasil)");
+                changeContentLanguage("Idiomas","Inglés (Estados Unidos)","Español (Colombia)","Italiano (Italia)","Portugués (Brasil)", "Ingresa tu contraseña");
                 break;
             case "it":
-                changeContentLanguage("Lingue","Inglese (Stati Uniti)","Spagnolo (Colombia)","Italiano (Italia)","Portoghese (Brasile)");
+                changeContentLanguage("Lingue","Inglese (Stati Uniti)","Spagnolo (Colombia)","Italiano (Italia)","Portoghese (Brasile)","Inserisci la tua password");
                 break;
             case "pt":
-                changeContentLanguage("Línguas","Inglês (Estados Unidos)","Espanhol (Colômbia)","Italiano (Itália)","Portugues (Brasil)");
+                changeContentLanguage("Línguas","Inglês (Estados Unidos)","Espanhol (Colômbia)","Italiano (Itália)","Portugues (Brasil)","Coloque sua senha");
                 break;
         }
     }
 }
 
 // Create a function to find the elements who change the language, and set the new language, using innerText method
-function changeContentLanguage(langTitle,lanInfoEng,lanInfoSpa,lanInfoIta,lanInfoPor){
+function changeContentLanguage(langTitle,lanInfoEng,lanInfoSpa,lanInfoIta,lanInfoPor,loginInputPlaceholder){
     const languagesTitle=document.querySelector(".languages-title");
     const langInfoEnglish=document.querySelector(".lang-info-english");
     const langInfoSpanish=document.querySelector(".lang-info-spanish");
@@ -65,4 +83,5 @@ function changeContentLanguage(langTitle,lanInfoEng,lanInfoSpa,lanInfoIta,lanInf
     langInfoSpanish.innerText=lanInfoSpa;
     langInfoItalian.innerText=lanInfoIta;
     langInfoPortugues.innerText=lanInfoPor;
+    loginInput.placeholder=loginInputPlaceholder;
 }

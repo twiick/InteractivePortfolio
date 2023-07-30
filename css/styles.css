@@ -9,6 +9,70 @@
     --dark-blue: #404a6b;
     --blue: #8c9fe5;
     --white-01: rgba(185, 185, 185, 0.2);
+    --gray: #b4b4b4;
+    --dark-orange: #B13F34;
+}
+#locked-screen{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#locked-screen-blur{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(0);
+    transition: .5s;
+}
+#locked-screen-blur.blur{
+    backdrop-filter: blur(5px);
+    transition: .5s;
+}
+#login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#login-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#login-username{
+    margin: 4px 0;
+    color: var(--dark-orange);
+    font-size: 24px;
+    font-weight: 500;
+}
+#login-input-container{
+    background-color: white;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    border: solid 2px var(--dark-orange);
+    border-radius: 4px;
+}
+.input{
+    height: 100%;
+    padding: 8px;
+    color: var(--gray);
+    border: none;
+    outline: none;
+}
+.password-icon{
+    width: 36px;
+    padding: 8px;
+    color: var(--gray);
+    cursor: pointer;
 }
 .languages-context-menu{
     background: var(--dark-blue);

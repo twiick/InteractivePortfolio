@@ -1,89 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
-    <!-- IMPORT CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <!-- IMPORT FONTS FROM GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="desktop"></div>
-    <!-- LOCKED SCREEN -->
-    <div id="locked-screen" class="visible">
-        <!-- LOCKED SCREEN BLUR -->
-        <div id="locked-screen-blur"></div>
-    </div>
-    <!-- LOGIN CONTAINER -->
-    <div id="login-container" class="enable disable visible invisible">
-        <!-- LOGIN IMAGE -->
-        <img src="./assets/images/pictures/profile-image.png" alt="" id="login-image">
-        <p id="login-username">twiick.com</p>
-        <!-- LOGIN INPUT CONTAINER -->
-        <div id="login-input-container">
-            <input type="password" placeholder="Enter your password" id="login-input" class="input">
-            <i class="fa-regular fa-eye password-icon" id="login-input-icon"></i>
-        </div>
-    </div>
-    <!-- LOCKED SCREEN MENU-->
-    <nav id="screen-float-menu" class="enable disable visible invisible">
-        <ul>
-            <li id="language-icon">
-                <p id="current-language-info" class="language-icon">
-                    <span id="current-language-name">ENG</span>
-                    <span id="current-language-region">LAA</span>
-                </p>
-                <!-- LANGUAGES CONTEXT MENU -->
-                <div id="languages-context-menu" class="languages-context-menu enable disable visible invisible">
-                    <p class="languages-title">Languages</p>
-                    <!-- ENGLISH LANGUAGE BUTTON -->
-                    <div class="lang-button lang-en active">
-                        <p class="lang-initial">ENG</p>
-                        <span class="lang-info">
-                            <p class="lang-info-name lang-info-english">English (United States)</p>
-                            <p class="lang-info-region">US</p>
-                        </span>
-                        <div class="active-language"></div>
-                    </div>
-                    <!-- SPANISH LANGUAGE BUTTON -->
-                    <div class="lang-button lang-es">
-                        <p class="lang-initial">ESP</p>
-                        <span class="lang-info">
-                            <p class="lang-info-name lang-info-spanish">Spanish (Colombia)</p>
-                            <p class="lang-info-region">Latin American</p>
-                        </span>
-                        <div class="active-language"></div>
-                    </div>
-                    <!-- ITALIAN LANGUAGE BUTTON -->
-                    <div class="lang-button lang-it">
-                        <p class="lang-initial">ITA</p>
-                        <span class="lang-info">
-                            <p class="lang-info-name lang-info-italian">Italian (Italy)</p>
-                            <p class="lang-info-region">IT</p>
-                        </span>
-                        <div class="active-language"></div>
-                    </div>
-                    <!-- PORTUGUES LANGUAGE  BUTTON -->
-                    <div class="lang-button lang-pt">
-                        <p class="lang-initial">PTG</p>
-                        <span class="lang-info">
-                            <p class="lang-info-name lang-info-portugues">Portugues (Portugal)</p>
-                            <p class="lang-info-region">PT</p>
-                        </span>
-                        <div class="active-language"></div>
-                    </div>
-                </div>
-            </li>
-            <li id="website-icon">
+<li id="website-list">
                 <p id="current-site-info">
-                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-wifi"></i>
                 </p>
                 <!-- WEBSITES CONTEXT MENU -->
-                <div id="websites-context-menu" class="enable disable visible invisible">
+                <div class="websites-context-menu">
                     <p class="websites-title">Websites and Projects</p>
                     <!-- TWIICK PORTFOLIO-->
                     <a href="http://twiick.com" target="_blank" class="websites-item">
@@ -159,11 +79,3 @@
                     </a>
                 </div>
             </li>
-        </ul>
-    </nav>
-    <!-- IMPORT SCRIPT -->
-    <script src="./js/main.js"></script>
-    <!-- IMPORT ICONS FROM FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/73239f458e.js" crossorigin="anonymous"></script>
-</body>
-</html>
